@@ -408,7 +408,7 @@ mxCodec.prototype.decode = function(node, into)
 		
 		try
 		{
-			ctor = window[node.nodeName];
+			ctor = window[node.nodeName] || eval(node.nodeName);
 		}
 		catch (err)
 		{
